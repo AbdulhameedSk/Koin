@@ -1,5 +1,5 @@
 import About from "../components/About";
-import CradsPromo from "../components/CradsPromo";
+import CradsPromo from "../components/CardsPromo";
 import Crypto from "../components/Crypto";
 import PageHolder from "../components/PageHolder";
 import PerformanceSection from "../components/PerformanceSection";
