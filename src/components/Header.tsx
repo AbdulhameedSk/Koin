@@ -1,6 +1,35 @@
 import { useState } from 'react';
 import logo from "../assets/logo.svg";
 
+interface NavItemProps {
+  href: string;
+  children: React.ReactNode;
+}
+
+// Navigation item component for desktop view
+function NavItem({ href, children }: NavItemProps) {
+  return (
+    <a
+      href={href}
+      className="text-lg font-semibold text-[#0F1629] hover:text-[#2870EA]"
+    >
+      {children}
+    </a>
+  );
+}
+
+// Navigation item component for mobile view
+function NavItemMobile({ href, children }: NavItemProps) {
+  return (
+    <a
+      href={href}
+      className="block px-3 py-2 rounded-md text-base font-medium text-[#0F1629] hover:text-[#2870EA] hover:bg-gray-50"
+    >
+      {children}
+    </a>
+  );
+}
+
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -82,30 +111,6 @@ function Header() {
         </div>
       </div>
     </div>
-  );
-}
-
-// Navigation item component for desktop view
-function NavItem({ href, children }) {
-  return (
-    <a
-      href={href}
-      className="text-lg font-semibold text-[#0F1629] hover:text-[#2870EA]"
-    >
-      {children}
-    </a>
-  );
-}
-
-// Navigation item component for mobile view
-function NavItemMobile({ href, children }) {
-  return (
-    <a
-      href={href}
-      className="block px-3 py-2 rounded-md text-base font-medium text-[#0F1629] hover:text-[#2870EA] hover:bg-gray-50"
-    >
-      {children}
-    </a>
   );
 }
 
