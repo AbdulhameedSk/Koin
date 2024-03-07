@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import logo from "../assets/logo.svg";
 
 interface NavItemProps {
@@ -59,13 +59,15 @@ function Header() {
               type="button"
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500"
               aria-controls="mobile-menu"
-              aria-expanded={isMobileMenuOpen ? 'true' : 'false'}
+              aria-expanded={isMobileMenuOpen ? "true" : "false"}
               onClick={toggleMobileMenu}
             >
               <span className="sr-only">Open main menu</span>
               {/* Icon when menu is closed. Heroicon name: outline/menu */}
               <svg
-                className={`block h-6 w-6 ${isMobileMenuOpen ? 'hidden' : 'block'}`}
+                className={`block h-6 w-6 ${
+                  isMobileMenuOpen ? "hidden" : "block"
+                }`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -81,7 +83,7 @@ function Header() {
               </svg>
               {/* Icon when menu is open. Heroicon name: outline/x */}
               <svg
-                className={`h-6 w-6 ${isMobileMenuOpen ? 'block' : 'hidden'}`}
+                className={`h-6 w-6 ${isMobileMenuOpen ? "block" : "hidden"}`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -100,8 +102,12 @@ function Header() {
         </div>
       </div>
       {/* Mobile menu, toggle className based on menu state. */}
-      <div className={`sm:hidden ${isMobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
-        <div className="px-2 pt-2 pb-3 space-y-1">
+      <div
+        className={`sm:hidden ${isMobileMenuOpen ? "block" : "hidden"}`}
+        id="mobile-menu"
+      >
+        <div className="hidden sm:flex items-center space-x-4">
+          {" "}
           <NavItemMobile href="#">Crypto Taxes</NavItemMobile>
           <NavItemMobile href="#">Free Tools</NavItemMobile>
           <NavItemMobile href="#">Resource Center</NavItemMobile>
